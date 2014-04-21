@@ -1,1 +1,0 @@
-yellow{p:#ff0}

@@ -24,12 +24,12 @@
   "author": "Brian LeRoux",
   "license": "Apache2",
   "dependencies": {
-    "react": "^0.10.0",
-    "prova": "^1.5.4",
-    "browserify": "^3.44.0",
+    "react": "0.10.0",
+    "prova": "1.5.4",
+    "browserify": "3.44.0",
     "npm-css": "^0.2.3",
     "phonegap": "^3.4.0-0.19.17",
     "watchy": "^0.4.3",
-    "reactify": "^0.11.0"
+    "reactify": "0.11.0"
   }
 }

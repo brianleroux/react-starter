@@ -21,7 +21,11 @@ The source layout looks like this:
      |-package.json ... automatia in scripts, deps
      '-readme.md
 
+## Publishing
+
 You can quickly iterate on things in `src/`. Ideally, you use this template to build a single React control. You denote the entry to the control in `package.json` under the "main" key to enable `require`, and "style" key to enable `@imports`. From there you could `npm publish` or `npm link` to compose into an app or composite component. Only `js` and `css` are supported so images, and fonts, need to be inlined appropriately. 
+
+To map `www/` to `gh-pages` simply run: `git subtree push --prefix www origin gh-pages`.
 
 ## tasks
 

@@ -19,6 +19,7 @@
     "html": "cp src/index.html www/index.html",
     "build": "npm run js && npm run css && npm run html",
     "watch": "node node_modules/watchy/bin/watchy -w src -- npm run build",
+    "gh-pages": "git subtree push --prefix www origin gh-pages",
     "serve": "npm run watch & node node_modules/phonegap/bin/phonegap serve"
   },
   "author": "Brian LeRoux",

@@ -10,17 +10,17 @@
     ]
   },
   "scripts": {
-    "before-test": "node node_modules/browserify/bin/cmd src/js/text.js -o test/text.js",
-    "test": "npm run before-test && node node_modules/prova/bin/prova test/* && npm run after-test",
+    "before-test": "browserify src/js/text.js -o test/text.js",
+    "test": "npm run before-test && prova test/* && npm run after-test",
     "after-test": "rm test/text.js",
-    "browser-test": "node node_modules/prova/bin/prova test/* -b",
-    "js": "node node_modules/browserify/bin/cmd src/js/index.js -o www/index.js",
-    "css": "node node_modules/npm-css/bin/npm-css src/css/index.css -o www/index.css",
+    "browser-test": "prova test/* -b",
+    "js": "browserify src/js/index.js -o www/index.js",
+    "css": "npm-css src/css/index.css -o www/index.css",
     "html": "cp src/index.html www/index.html",
     "build": "npm run js && npm run css && npm run html",
-    "watch": "node node_modules/watchy/bin/watchy -w src -- npm run build",
+    "watch": "watchy -w src -- npm run build",
     "gh-pages": "git subtree push --prefix www origin gh-pages",
-    "serve": "npm run watch & node node_modules/phonegap/bin/phonegap serve"
+    "serve": "npm run watch & phonegap serve"
   },
   "author": "Brian LeRoux",
   "license": "Apache2",
